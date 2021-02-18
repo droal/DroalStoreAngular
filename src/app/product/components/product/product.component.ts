@@ -1,15 +1,15 @@
-import { 
-  Component, 
-  Input, 
-  Output, 
+import {
+  Component,
+  Input,
+  Output,
   EventEmitter,
-  OnChanges,
+  // OnChanges,
   SimpleChanges,
   OnInit,
   DoCheck,
   OnDestroy
 } from '@angular/core';
-import { Product } from '../product.model';
+import { Product } from '../../../core/models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -17,8 +17,8 @@ import { Product } from '../product.model';
   styleUrls: ['./product.component.scss'],
 })
 
-export class ProductComponent implements 
-OnChanges, 
+export class ProductComponent implements
+// OnChanges,
 OnInit,
 DoCheck,
 OnDestroy
@@ -31,9 +31,9 @@ OnDestroy
   constructor(){
     console.log('1. constructor');
   }
-  ngOnChanges(changes: SimpleChanges){
+/*   ngOnChanges(changes: SimpleChanges){
     console.log('2. ngOnchanges');
-  }
+  } */
   ngOnInit(){
     console.log('3. ngOnInit');
   }
