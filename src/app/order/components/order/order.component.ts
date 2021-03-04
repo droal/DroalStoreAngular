@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { ProductEditComponent } from 'src/app/admin/components/product-edit/product-edit.component';
 import { Product } from './../../../core/models/product.model';
 import { CartService } from './../../../core/services/cart.service';
 
