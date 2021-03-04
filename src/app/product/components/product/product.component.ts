@@ -10,6 +10,7 @@ import {
   OnDestroy
 } from '@angular/core';
 import { Product } from '../../../core/models/product.model';
+import { CartService } from '../../../core/services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -28,26 +29,27 @@ OnDestroy
   @Output() addProductCliked: EventEmitter<any> = new EventEmitter();
   today = new Date();
 
-  constructor(){
+  constructor(private cartService: CartService){
     console.log('1. constructor');
   }
 /*   ngOnChanges(changes: SimpleChanges){
     console.log('2. ngOnchanges');
   } */
-  ngOnInit(){
+  ngOnInit(): void{
     console.log('3. ngOnInit');
   }
-  ngDoCheck(){
+  ngDoCheck(): void{
     console.log('4. ngDoCheck');
   }
-  ngOnDestroy(){
+  ngOnDestroy(): void{
     console.log('5. ngOnDestroy');
   }
 
 
-  addCart(){
+  addCart(): void{
     console.log('Añadir carrito pulsado');
-    this.addProductCliked.emit(this.product.id);
+    this.cartService.addCart(this.product);
+    //this.addProductCliked.emit(this.product.id);
   }
 
 }
