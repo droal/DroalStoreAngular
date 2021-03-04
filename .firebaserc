@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "droal-store": {
+      "hosting": {
+        "DroalStore": [
+          "droal-store"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "droal-store"
+  }
+}
